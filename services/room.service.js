@@ -9,7 +9,7 @@ const createMeeting = async (hostName) => {
     const roomOptions = {
         name: roomName,
         emptyTimeout: 10 * 60, // 10 minutes
-        maxParticipants: 2, // one-to-one meeting
+        maxParticipants: 3, // one-to-one meeting
     };
 
     try {
