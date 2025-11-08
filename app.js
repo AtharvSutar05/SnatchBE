@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import roomRoutes from './routes/room.routes.js';
+import versionRoute from './routes/version.routes.js';
 // import { connectDB } from './config/db.js';
 
 dotenv.config();
@@ -18,6 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use('/room', roomRoutes);
+app.use('/latest', versionRoute);
 
 // Basic route for testing
 app.get('/', (req, res) => {
